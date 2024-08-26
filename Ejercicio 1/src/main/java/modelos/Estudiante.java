@@ -79,9 +79,33 @@ public class Estudiante {
         this.tercerCorte = tercerCorte;
     }
 
+    public int obtNotaFinal(){
+        return (int) (this.primerCorte + this.segundoCorte + this.tercerCorte)/3;
+    }
 
+    public String evalNotaFinal(){
+        int notaFinal = obtNotaFinal();
+        if (notaFinal >= 70 && notaFinal <= 100){
+            return "aprobado";
+        } else if (notaFinal >= 0 && notaFinal < 70){
+            return "reprobado";
+        } else {
+            return "nota invalida";
+        }
+    }
 
-
+    public String evalConvocatoria(){
+        int notaFinal = obtNotaFinal();
+        if (notaFinal < 0 || notaFinal > 100){
+            return "nota invalida";
+        }
+        else if (notaFinal >= 60 && notaFinal <= 69){
+            return "clasifica a convocatoria";
+        }
+        else {
+            return "no clasifica a convocatoria";
+        }
+    }
 
 
 

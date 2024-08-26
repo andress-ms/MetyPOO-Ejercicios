@@ -26,12 +26,13 @@ public class Main {
         System.out.print("CORTE 2: ");
         nota2 = Integer.parseInt(sc.nextLine());
         System.out.print("CORTE 3: ");
-        est.setNombres(nombres);
-        est.setApellidos(apellidos);
+        nota3 = Integer.parseInt(sc.nextLine());
+        est.setNombre(nombres);
+        est.setApellido(apellidos);
         est.setAsignatura(asignatura);
-        est.setCorte1(nota1);
-        est.setCorte2(nota2);
-        est.setCorte3(nota3);
+        est.setPrimerCorte(nota1);
+        est.setSegundoCorte(nota2);
+        est.setTercerCorte(nota3);
         nf = est.obtNotaFinal();
         System.out.println("Nota Final: " + nf);
         System.out.println(est.evalNotaFinal());
