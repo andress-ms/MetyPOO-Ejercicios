@@ -11,7 +11,8 @@ public class Main {
         String menu = "1. Agregar estudiante\n" +
                 "2. Buscar estudiante estudiante\n" +
                 "3. Mostrar estudiantes\n" +
-                "4. Salir\n" +
+                "4. Promedio de edades" +
+                "5. Salir\n" +
                 "Seleccione una opcion: ";
 
         int option = 0;
@@ -40,8 +41,12 @@ public class Main {
                     students.showStudents();
                     break;
                 case 4:
+                    System.out.println("hi");
+                case 5:
                     System.out.println("Saliendo...");
                     break;
+                default:
+                    System.out.println("Opcion no valida");
 
             }
 
